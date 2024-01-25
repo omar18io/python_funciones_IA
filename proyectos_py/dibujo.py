@@ -19,6 +19,3 @@ if __name__ == "__main__":
     # Llamar a la función para convertir a dibujo
     convertir_a_dibujo(imagen_path)
     print("La conversión a dibujo ha sido completada. El dibujo se ha guardado como 'dibujo.png'")
-
-
-
