@@ -12,4 +12,3 @@ draw.text((0, 0), "Hola mundo hshshhshs s hshshhshhs s hshshhsh shshssssssss ðŸ¤
 
 # Guarda la imagen modificada
 image.save("wordart.jpg")
-

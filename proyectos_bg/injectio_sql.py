@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 import sqlite3
 app = Flask(__name__)
+@app.route("/")
+def home():
+    return "Página de inicio"
 @app.route("/crear-tabla")
 def crear_tabla():
     conn = sqlite3.connect("usuario.db")
@@ -16,6 +19,7 @@ def crear_tabla():
     return "Base de datos creada"
 @app.route("/login")
 def login():
+    # c.execute("SELECT * FROM usuarios WHERE username = ? AND password = ?", (username, password))
     username = request.args.get('username')
     password = request.args.get('password')
     conn = sqlite3.connect("usuarios.db")
@@ -30,10 +34,3 @@ def login():
     return jsonify(result_dict)
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-
-
-
-
